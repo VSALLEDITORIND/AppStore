@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OWNER ENAFUL | EXTREME RED REPOSITORY</title>
+    <title>OWNER ENAFUL | PREMIUM STORE</title>
     <style>
         :root {
             --neon-red: #ff0000;
-            --dark-red: #330000;
             --bg-black: #000000;
         }
 
@@ -37,17 +36,14 @@
             flex-direction: column;
             align-items: center;
             padding: 40px 20px;
-            backdrop-filter: blur(2px);
         }
 
-        /* Profile Header */
         .profile-img {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 4px solid var(--neon-red);
-            box-shadow: 0 0 30px var(--neon-red), inset 0 0 15px var(--neon-red);
-            margin-top: 10px;
+            box-shadow: 0 0 30px var(--neon-red);
             object-fit: cover;
             animation: pulse 2s infinite;
         }
@@ -62,7 +58,7 @@
             font-size: 3em;
             font-weight: 900;
             text-shadow: 0 0 15px var(--neon-red);
-            margin: 20px 0 5px 0;
+            margin: 20px 0 10px 0;
             letter-spacing: 5px;
             text-align: center;
         }
@@ -71,74 +67,53 @@
             width: 90%;
             max-width: 600px;
             padding: 15px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             border: 2px solid var(--neon-red);
-            border-radius: 5px;
-            color: var(--neon-red);
+            color: white;
             text-align: center;
-            margin: 30px 0;
-            font-size: 1.2em;
-            box-shadow: 0 0 15px var(--dark-red);
+            margin-bottom: 35px;
+            border-radius: 5px;
             outline: none;
-            transition: 0.3s;
+            font-size: 1.1em;
         }
 
-        .search-box:focus {
-            box-shadow: 0 0 25px var(--neon-red);
-            background: rgba(20, 0, 0, 0.9);
-        }
-
-        /* App Grid */
         .app-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            gap: 20px;
             width: 100%;
             max-width: 1200px;
         }
 
         .app-card {
-            background: rgba(10, 0, 0, 0.9);
-            border: 1px solid var(--neon-red);
+            background: rgba(20, 0, 0, 0.9);
+            border: 1.5px solid var(--neon-red);
             border-radius: 10px;
             padding: 25px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 0 10px var(--dark-red);
-        }
-
-        .app-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,0,0,0.1) 0%, transparent 70%);
-            pointer-events: none;
+            transition: 0.3s;
         }
 
         .app-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: 0 0 30px var(--neon-red);
-            border-width: 2px;
-            background: rgba(30, 0, 0, 0.95);
         }
 
         .app-icon {
             font-size: 3.5em;
-            margin-bottom: 15px;
             display: block;
-            filter: drop-shadow(0 0 10px var(--neon-red));
+            margin-bottom: 15px;
         }
 
         .app-name {
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 20px;
-            letter-spacing: 1px;
+            color: #fff;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .download-btn {
@@ -151,22 +126,19 @@
             border-radius: 4px;
             text-transform: uppercase;
             transition: 0.3s;
-            border: 1px solid transparent;
         }
 
         .download-btn:hover {
-            background: #000;
-            color: var(--neon-red);
-            border: 1px solid var(--neon-red);
-            box-shadow: 0 0 20px var(--neon-red);
+            background: #fff;
+            color: #ff0000;
         }
 
         footer {
             margin-top: 50px;
             padding: 20px;
-            font-size: 0.8em;
-            letter-spacing: 3px;
             opacity: 0.7;
+            letter-spacing: 2px;
+            text-align: center;
         }
     </style>
 </head>
@@ -178,157 +150,103 @@
         <img src="1000422326.jpg" class="profile-img" alt="OWNER ENAFUL">
         
         <h1 class="owner-title">OWNER ENAFUL</h1>
-        <p style="letter-spacing: 2px;">ULTIMATE CYBER TOOLS REPOSITORY</p>
+        <p>PREMIUM CYBER TOOLS REPOSITORY</p>
 
-        <input type="text" id="search" class="search-box" placeholder="SEARCH ENCRYPTED FILES..." onkeyup="filterApps()">
+        <input type="text" id="search" class="search-box" placeholder="SEARCH TOOLS..." onkeyup="filter()">
 
         <div class="app-grid" id="appGrid">
             
             <div class="app-card">
-                <span class="app-icon">🛡️</span>
+                <span class="app-icon">🛠️</span>
                 <div class="app-name">APK Editor Pro++</div>
-                <a href="APK Editor Pro++_2.apk" download class="download-btn">DOWNLOAD TOOL</a>
+                <a href="APK Editor Pro++_2.apk" download class="download-btn">DOWNLOAD</a>
             </div>
 
             <div class="app-card">
-                <span class="app-icon">📦</span>
-                <div class="app-name">F-Droid 1.23.1</div>
-                <a href="F-Droid_1.23.1.apk" download class="download-btn">DOWNLOAD STORE</a>
+                <span class="app-icon">🛒</span>
+                <div class="app-name">F-Droid Store</div>
+                <a href="F-Droid_1.23.1.apk" download class="download-btn">DOWNLOAD</a>
             </div>
 
             <div class="app-card">
                 <span class="app-icon">🌐</span>
-                <div class="app-name">Via Browser 6.4.0</div>
-                <a href="Via_6.4.0 (1).apk" download class="download-btn">DOWNLOAD BROWSER</a>
+                <div class="app-name">Via Browser Pro</div>
+                <a href="Via_6.4.0 (1).apk" download class="download-btn">DOWNLOAD</a>
+            </div>
+
+            <div class="app-card">
+                <span class="app-icon">🐚</span>
+                <div class="app-name">Termux Terminal</div>
+                <a href="#" download class="download-btn">DOWNLOAD</a>
             </div>
 
             <div class="app-card">
                 <span class="app-icon">📱</span>
-                <div class="app-name">Lite Main</div>
+                <div class="app-name">Lite APK (Main)</div>
                 <a href="Lite.apk" download class="download-btn">DOWNLOAD LITE</a>
             </div>
 
-            <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite 2 APK</div>
-                <a href="Lite 2.apk" download class="download-btn">DOWNLOAD LITE 2</a>
-            </div>
-
-            <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite 3 APK</div>
-                <a href="Lite 3.apk" download class="download-btn">DOWNLOAD LITE 3</a>
-            </div>
-
-            <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite 4 APK</div>
-                <a href="Lite 4.apk" download class="download-btn">DOWNLOAD LITE 4</a>
-            </div>
-
-            <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite 5 APK</div>
-                <a href="Lite 5.apk" download class="download-btn">DOWNLOAD LITE 5</a>
-            </div>
-
-            <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite 6 APK</div>
-                <a href="Lite 6.apk" download class="download-btn">DOWNLOAD LITE 6</a>
-            </div>
-
-            <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite 7 APK</div>
-                <a href="Lite 7.apk" download class="download-btn">DOWNLOAD LITE 7</a>
-            </div>
-
-            <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite 8 APK</div>
-                <a href="Lite 8.apk" download class="download-btn">DOWNLOAD LITE 8</a>
-            </div>
-
-            <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite 9 APK</div>
-                <a href="Lite 9.apk" download class="download-btn">DOWNLOAD LITE 9</a>
-            </div>
-
-            <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite 10 APK</div>
-                <a href="Lite.10.apk" download class="download-btn">DOWNLOAD LITE 10</a>
-            </div>
-
-            <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite 11 APK</div>
-                <a href="Lite.11.apk" download class="download-btn">DOWNLOAD LITE 11</a>
-            </div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 2 APK</div><a href="Lite 2.apk" download class="download-btn">DOWNLOAD LITE 2</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 3 APK</div><a href="Lite 3.apk" download class="download-btn">DOWNLOAD LITE 3</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 4 APK</div><a href="Lite 4.apk" download class="download-btn">DOWNLOAD LITE 4</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 5 APK</div><a href="Lite 5.apk" download class="download-btn">DOWNLOAD LITE 5</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 6 APK</div><a href="Lite 6.apk" download class="download-btn">DOWNLOAD LITE 6</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 7 APK</div><a href="Lite 7.apk" download class="download-btn">DOWNLOAD LITE 7</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 8 APK</div><a href="Lite 8.apk" download class="download-btn">DOWNLOAD LITE 8</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 9 APK</div><a href="Lite 9.apk" download class="download-btn">DOWNLOAD LITE 9</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 10 APK</div><a href="Lite.10.apk" download class="download-btn">DOWNLOAD LITE 10</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 11 APK</div><a href="Lite.11.apk" download class="download-btn">DOWNLOAD LITE 11</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 12 APK</div><a href="Lite 12.apk" download class="download-btn">DOWNLOAD LITE 12</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 13 APK</div><a href="Lite 13.apk" download class="download-btn">DOWNLOAD LITE 13</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 14 APK</div><a href="Lite 14.apk" download class="download-btn">DOWNLOAD LITE 14</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 15 APK</div><a href="Lite 15.apk" download class="download-btn">DOWNLOAD LITE 15</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 16 APK</div><a href="Lite 16.apk" download class="download-btn">DOWNLOAD LITE 16</a></div>
 
         </div>
 
-        <footer>© 2026 OWNER ENAFUL | SECURED BY CYBER-71</footer>
+        <footer>© 2026 OWNER ENAFUL | POWERED BY CYBER-71</footer>
     </div>
 
     <script>
-        // ADVANCED MATRIX EFFECT
+        // RED MATRIX RAIN (FULL SPEED)
         const canvas = document.getElementById('matrixCanvas');
         const ctx = canvas.getContext('2d');
-
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
         const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&*";
         const fontSize = 18;
         const columns = canvas.width / fontSize;
-        const drops = [];
+        const drops = Array(Math.floor(columns)).fill(1);
 
-        for (let x = 0; x < columns; x++) {
-            drops[x] = 1;
-        }
-
-        const draw = () => {
+        function draw() {
             ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-
             ctx.fillStyle = "#ff0000";
             ctx.font = fontSize + "px monospace";
-
             for (let i = 0; i < drops.length; i++) {
                 const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
                 ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
                 drops[i]++;
             }
-        };
-
+        }
         setInterval(draw, 35);
 
-        // Responsive resize
+        // SEARCH FUNCTION
+        function filter() {
+            let val = document.getElementById('search').value.toLowerCase();
+            let cards = document.getElementsByClassName('app-card');
+            for(let card of cards) {
+                let name = card.querySelector('.app-name').innerText.toLowerCase();
+                card.style.display = name.includes(val) ? "block" : "none";
+            }
+        }
+
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         });
-
-        // SEARCH FILTER
-        function filterApps() {
-            let input = document.getElementById('search').value.toLowerCase();
-            let cards = document.getElementsByClassName('app-card');
-            for (let card of cards) {
-                let name = card.querySelector('.app-name').innerText.toLowerCase();
-                if (name.includes(input)) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
-            }
-        }
     </script>
 </body>
 </html>
