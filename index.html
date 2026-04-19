@@ -21,6 +21,7 @@
             overflow-x: hidden;
         }
 
+        /* RED MATRIX RAIN CANVAS */
         #matrixCanvas {
             position: fixed;
             top: 0;
@@ -28,7 +29,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            opacity: 0.8;
+            opacity: 0.9; /* উজ্জ্বলতা একটু বাড়ানো হয়েছে */
         }
 
         .container {
@@ -142,9 +143,7 @@
         }
     </style>
 </head>
-<body>
-
-    <canvas id="matrixCanvas"></canvas>
+<body onclick="playWelcome()"> <canvas id="matrixCanvas"></canvas>
 
     <div class="container">
         <img src="1000422326.jpg" class="profile-img" alt="OWNER ENAFUL">
@@ -155,7 +154,6 @@
         <input type="text" id="search" class="search-box" placeholder="SEARCH TOOLS..." onkeyup="filter()">
 
         <div class="app-grid" id="appGrid">
-            
             <div class="app-card">
                 <span class="app-icon">🛠️</span>
                 <div class="app-name">APK Editor Pro++</div>
@@ -181,34 +179,60 @@
             </div>
 
             <div class="app-card">
-                <span class="app-icon">📱</span>
-                <div class="app-name">Lite APK (Main)</div>
-                <a href="Lite.apk" download class="download-btn">DOWNLOAD LITE</a>
+                <span class="app-icon">📡</span>
+                <div class="app-name">W8Baler WiFi Hack V1</div>
+                <a href="#" download class="download-btn">DOWNLOAD</a>
             </div>
 
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 2 APK</div><a href="Lite 2.apk" download class="download-btn">DOWNLOAD LITE 2</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 3 APK</div><a href="Lite 3.apk" download class="download-btn">DOWNLOAD LITE 3</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 4 APK</div><a href="Lite 4.apk" download class="download-btn">DOWNLOAD LITE 4</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 5 APK</div><a href="Lite 5.apk" download class="download-btn">DOWNLOAD LITE 5</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 6 APK</div><a href="Lite 6.apk" download class="download-btn">DOWNLOAD LITE 6</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 7 APK</div><a href="Lite 7.apk" download class="download-btn">DOWNLOAD LITE 7</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 8 APK</div><a href="Lite 8.apk" download class="download-btn">DOWNLOAD LITE 8</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 9 APK</div><a href="Lite 9.apk" download class="download-btn">DOWNLOAD LITE 9</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 10 APK</div><a href="Lite.10.apk" download class="download-btn">DOWNLOAD LITE 10</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 11 APK</div><a href="Lite.11.apk" download class="download-btn">DOWNLOAD LITE 11</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 12 APK</div><a href="Lite 12.apk" download class="download-btn">DOWNLOAD LITE 12</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 13 APK</div><a href="Lite 13.apk" download class="download-btn">DOWNLOAD LITE 13</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 14 APK</div><a href="Lite 14.apk" download class="download-btn">DOWNLOAD LITE 14</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 15 APK</div><a href="Lite 15.apk" download class="download-btn">DOWNLOAD LITE 15</a></div>
-            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 16 APK</div><a href="Lite 16.apk" download class="download-btn">DOWNLOAD LITE 16</a></div>
+            <div class="app-card">
+                <span class="app-icon">🔐</span>
+                <div class="app-name">W8MobileLockV2</div>
+                <a href="#" download class="download-btn">DOWNLOAD</a>
+            </div>
+
+            <div class="app-card">
+                <span class="app-icon">📱</span>
+                <div class="app-name">Lite APK (Main)</div>
+                <a href="Lite.apk" download class="download-btn">DOWNLOAD</a>
+            </div>
+
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 2 APK</div><a href="Lite 2.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 3 APK</div><a href="Lite 3.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 4 APK</div><a href="Lite 4.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 5 APK</div><a href="Lite 5.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 6 APK</div><a href="Lite 6.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 7 APK</div><a href="Lite 7.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 8 APK</div><a href="Lite 8.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 9 APK</div><a href="Lite 9.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 10 APK</div><a href="Lite.10.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 11 APK</div><a href="Lite.11.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 12 APK</div><a href="Lite 12.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 13 APK</div><a href="Lite 13.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 14 APK</div><a href="Lite 14.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 15 APK</div><a href="Lite 15.apk" download class="download-btn">DOWNLOAD</a></div>
+            <div class="app-card"><span class="app-icon">📱</span><div class="app-name">Lite 16 APK</div><a href="Lite 16.apk" download class="download-btn">DOWNLOAD</a></div>
 
         </div>
 
-        <footer>© 2026 OWNER ENAFUL | POWERED BY CYBER-71</footer>
+        <footer>© 2026 OWNER ENAFUL | SECURED BY CYBER-69</footer>
     </div>
 
     <script>
-        // RED MATRIX RAIN (FULL SPEED)
+        // ১. ভয়েস ওয়েলকাম সিস্টেম (Welcome Boss Enaful)
+        let played = false;
+        function playWelcome() {
+            if (!played) {
+                const msg = new SpeechSynthesisUtterance("Welcome boss enaful website");
+                msg.lang = 'en-US';
+                msg.rate = 0.9;
+                window.speechSynthesis.speak(msg);
+                played = true;
+            }
+        }
+        // অটো-প্লে চেষ্টা (কিছু ব্রাউজারে কাজ করবে)
+        window.onload = () => { setTimeout(playWelcome, 1000); };
+
+        // ২. রেড ম্যাট্রিক্স ইফেক্ট (RED MATRIX RAIN)
         const canvas = document.getElementById('matrixCanvas');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
@@ -220,9 +244,9 @@
         const drops = Array(Math.floor(columns)).fill(1);
 
         function draw() {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillStyle = "rgba(0, 0, 0, 0.08)"; // হালকা ট্রেইল
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "#ff0000";
+            ctx.fillStyle = "#ff0000"; // একদম লাল কালার
             ctx.font = fontSize + "px monospace";
             for (let i = 0; i < drops.length; i++) {
                 const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
@@ -231,9 +255,9 @@
                 drops[i]++;
             }
         }
-        setInterval(draw, 35);
+        setInterval(draw, 33);
 
-        // SEARCH FUNCTION
+        // সার্চ ফাংশন
         function filter() {
             let val = document.getElementById('search').value.toLowerCase();
             let cards = document.getElementsByClassName('app-card');
