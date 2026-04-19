@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWNER ENAFUL | PREMIUM APP STORE</title>
+    <style>
+        /* Cyber Red Theme */
+        body {
+            background-color: #000;
+            background-image: linear-gradient(0deg, #000 0%, #1a0000 100%);
+            color: #ff0000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Neon Red Text Glow */
+        h1, h2, h3, p, a, input, .logo-text {
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000;
+            text-transform: uppercase;
+        }
+
+        /* Profile Image / Logo */
+        .profile-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #ff0000;
+            padding: 5px;
+            box-shadow: 0 0 20px #ff0000;
+            margin-bottom: 20px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 25px;
+            width: 100%;
+            max-width: 800px;
+            border: 2px solid #ff0000;
+            background: rgba(20, 0, 0, 0.9);
+            box-shadow: 0 0 30px #4b0000;
+            border-radius: 20px;
+        }
+
+        .logo-text {
+            font-size: 2.8em;
+            font-weight: 900;
+            letter-spacing: 8px;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            letter-spacing: 3px;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        /* Search Bar */
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px 25px;
+            background-color: #000;
+            border: 2px solid #ff0000;
+            border-radius: 50px;
+            color: #ff0000;
+            font-size: 1.1em;
+            text-align: center;
+            box-shadow: 0 0 15px #4b0000;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 25px #ff0000;
+            background: #110000;
+        }
+
+        /* App Grid */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .app-card {
+            background: rgba(10, 0, 0, 0.9);
+            border: 2px solid #ff0000;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 35px #ff0000;
+            background: #1a0000;
+        }
+
+        /* Badge system */
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: #ff0000;
+            color: #000;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.7em;
+            font-weight: bold;
+        }
+
+        .app-icon {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 10px #ff0000);
+        }
+
+        .app-title {
+            font-size: 1.4em;
+            font-weight: 800;
+            margin-bottom: 10px;
+            min-height: 40px;
+        }
+
+        .stats {
+            font-size: 0.85em;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #330000;
+            padding-top: 15px;
+        }
+
+        /* High Level Buttons */
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 12px;
+            border: 2px solid #ff0000;
+            background: transparent;
+            color: #ff0000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.8em;
+            transition: 0.3s;
+        }
+
+        .btn-download {
+            background: #ff0000;
+            color: #000;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 15px #ff0000;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin: 60px 0 30px;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            opacity: 0.6;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <img src="1000422326.jpg" alt="OWNER ENAFUL">
+    </div>
+
+    <div class="header">
+        <h1 class="logo-text">OWNER ENAFUL</h1>
+        <div class="subtitle">PREMIUM CYBER TOOLS REPOSITORY</div>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="SEARCH APK DATABASE...">
+    </div>
+
+    <div class="app-grid" id="appGrid">
+        
+        <div class="app-card">
+            <div class="badge">HOT</div>
+            <span class="app-icon">🛡️</span>
+            <div class="app-title">APK EDITOR PRO++</div>
+            <div class="stats">
+                <span>Downloads: 852</span>
+                <span>Version: 2.0</span>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn">DETAIL</a>
+                <a href="APK Editor Pro++_2.apk" download class="btn btn-download">DOWNLOAD</a>
+            </div>
+        </div>
+
+        <div class="app-card">
+            <div class="badge">NEW</div>
+            <span class="app-icon">📦</span>
+            <div class="app-title">F-DROID STORE</div>
+            <div class="stats">
+                <span>Downloads: 420</span>
+                <span>Status: Safe</span>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn">DETAIL</a>
+                <a href="F-Droid_1.23.1.apk" download class="btn btn-download">DOWNLOAD</a>
+            </div>
+        </div>
+
+        <div class="app-card">
+            <div class="badge">UPDT</div>
+            <span class="app-icon">🌐</span>
+            <div class="app-title">VIA BROWSER PRO</div>
+            <div class="stats">
+                <span>Downloads: 963</span>
+                <span>Type: Lite</span>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn">DETAIL</a>
+                <a href="Via_6.4.0 (1).apk" download class="btn btn-download">DOWNLOAD</a>
+            </div>
+        </div>
+
+        <div class="app-card">
+            <span class="app-icon">📱</span>
+            <div class="app-title">LITE 2 APK</div>
+            <div class="stats">
+                <span>Downloads: 124</span>
+                <span>Rank: #10</span>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn">DETAIL</a>
+                <a href="Lite 2.apk" download class="btn btn-download">DOWNLOAD</a>
+            </div>
+        </div>
+
+        <div class="app-card">
+            <span class="app-icon">📱</span>
+            <div class="app-title">LITE 10 APK</div>
+            <div class="stats">
+                <span>Downloads: 315</span>
+                <span>System: Android</span>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn">DETAIL</a>
+                <a href="Lite.10.apk" download class="btn btn-download">DOWNLOAD</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        POWERED BY OWNER ENAFUL © 2026 | ALL RIGHTS RESERVED
+    </div>
+
+    <script>
+        function searchApps() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('app-card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getElementsByClassName('app-title')[0].innerText.toLowerCase();
+                if (title.includes(input)) {
+                    cards[i].style.display = "block";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
